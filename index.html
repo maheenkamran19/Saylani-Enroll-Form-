@@ -12,7 +12,6 @@
     <h1>Registeration Form</h1>
     <h4>Start your journey towards excellence. Fill out the form to apply for our courses</h4>
     <br><br>
-<fieldset>
     <table width="80%"  align="center" cellpadding="12"
     <tr>
         <td width="25%" align="center" bgcolor="#087abd">
@@ -32,14 +31,13 @@
             </td>
         </tr>
     </table>
-</fieldset>
     <br>
-<form>
-    <h2><img src="images/location.png" height="18" width="18"> Location & Course Details</h2>
-
+    <form>
+    <fieldset>
+    <legend><img src="images/location.png" height="18" width="18"> Location & Course Details</legend>
     <label>Select Country*</label>
     <br>
-    <select name="countries">
+    <select name="countries" required>
         <option value="" disabled selected>Select country</option>
         <option value="pakistan">Pakistan</option>
         <option value="turkey">Turkey</option>
@@ -49,7 +47,7 @@
     <br><br>
     <label>Select class preference*</label>
     <br>
-    <select name="preferences">
+    <select name="preferences" required>
         <option value="" disabled selected>Select class preference</option>
         <option value="online">Online</option>
         <option value="onsite">Onsite</option>
@@ -57,7 +55,7 @@
     <br><br>
     <label>Select Gender*</label>
     <br>
-    <select name="gender">
+    <select name="gender" required>
         <option value="" disabled selected>Select gender</option>
         <option value="male">Male</option>
         <option value="female">Female</option>
@@ -79,7 +77,7 @@
 
     <label>Select Course*</label>
     <br>
-    <select name="course or event">
+    <select name="course or event" required>
         <option value="" disabled selected>Select course or event</option>
         <option>Professional Communication & Career Readiness</option>
         <option>English Language & Communication Skills</option>
@@ -88,68 +86,70 @@
 
     <label>Select Campus*</label>
     <br>
-    <select name="campus">
+    <select name="campus" required>
         <option value="" disabled selected>Select campus</option>
         <option value="online">Online</option>
     </select>
     <br><br>
+</fieldset>
 </form>
-
+<br>
 <form>
-    <h2><img src="images/account.png" alt=""> Personal Information</h2>
+    <fieldset>
+    <legend><img src="images/account.png" alt=""> Personal Information</legend>
 
      <label>Full Name*
         <br>
-        <input type="text" name="username" placeholder="♙ Enter your full name">
+        <input type="text" name="username" placeholder="♙ Enter your full name" required>
     </label>
     <br>
     <br>
     <br>
     <label>Father Name*
         <br>
-        <input type="text" name="fathername" placeholder="♙ Enter father's name">
+        <input type="text" name="fathername" placeholder="♙ Enter father's name" required>
     </label>
     <br>
     <br>
     <br>
     <label>Date of Birth*
         <br>
-        <input type="date" name="date" placeholder="🗓️ ">
+        <input type="date" name="date" placeholder="🗓️ " required>
     </label>
     <br>
     <br>
     <br>
     <label>Email*
         <br>
-        <input type="email" name="email" placeholder="✉️ your.email@example.com">
+        <input type="email" name="email" placeholder="✉️ your.email@example.com" required>
     </label>
     <br>
     <br>
     <br>
     <label>Phone*
         <br>
-        <input type="tel" name="number" placeholder="📞 +923xxxxxxxxx or 03xxxxxxxxx">
+        <input type="tel" name="number" placeholder="📞 +923xxxxxxxxx or 03xxxxxxxxx" required>
     </label>
     <br>
     <br>
     <br>
     <label>Father's Phone *
         <br>
-        <input type="tel" name="number" placeholder="📞 +923xxxxxxxxx or 03xxxxxxxxx">
+        <input type="tel" name="number" placeholder="📞 +923xxxxxxxxx or 03xxxxxxxxx" required>
     </label>
     <br>
     <br>
     <br>
     <label>CNIC *
         <br>
-        <input type="number" name="cnicnumber" placeholder="🪪 1234567890123 (13 digits)">
+        <input type="number" name="cnicnumber" placeholder="🪪 1234567890123 (13 digits)" required>
     </label>
     <br>
     <br>
     <br>
     <label>Father's CNIC*
         <br>
-        <input type="number" name="fathercnic" placeholder="🪪 1234567890123 (13 digits)">
+        <input type="number" name="fathercnic" placeholder="🪪 1234567890123 (13 digits)" required>
     </label>
     <br>
     <br>
@@ -158,25 +158,27 @@
      <label>Address* (0/220 characters)
         <br>
         <br>
-        <textarea name="address" rows="8" placeholder="Enter your complete address (minimum 10 characters)"></textarea>
+        <textarea name="address" rows="8" placeholder="Enter your complete address (minimum 10 characters)" required></textarea>
           </label>
+      </fieldset>
 </form>
 
 <form >
-    <h2><img src="images/graduation.png"> Education & Technical Details</h2>
-
-    <label>Computer Proficiency *</label>
-    <br>
-    <select name="proficiencies">
-        <option value="" disabled selected>Select your computer proficiency</option>
-        <option value="beginner">Beginner</option>
-        <option value="intermediate">Intermediate</option>
-        <option value="advanced">Advanced</option>
-        <option value="expert">Expert</option>
-    </select>
-    <br><br><label>Last Qualification *</label>
-    <br>
-    <select name="qualifications">
+    <fieldset>
+        <legend><img src="images/graduation.png"> Education & Technical Details</legend>
+        
+        <label>Computer Proficiency *</label>
+        <br>
+        <select name="proficiencies" required>
+            <option value="" disabled selected>Select your computer proficiency</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+            <option value="expert">Expert</option>
+        </select>
+        <br><br><label>Last Qualification *</label>
+        <br>
+        <select name="qualifications" required>
         <option value="" disabled selected>Last qualification</option>
         <option value="matriculation">Matriculation</option>
         <option value="intermediate">Intermediate</option>
@@ -188,7 +190,7 @@
     <br><br>
     <label>Institution *</label>
     <br>
-    <select name="institutions">
+    <select name="institutions" required>
         <option value="" disabled selected>Select your institution</option>
         <option value="armyschools">Army Public School Peshawar</option>
         <option value="armyschools">Army Public School Quetta</option>
@@ -210,7 +212,7 @@
     </select>
     <br><br><label>Where did you hear about us? *</label>
     <br>
-    <select name="hear about">
+    <select name="hear about" required>
         <option value="socialmedia" disabled selected>Where did you hear about us?</option>
         <option value="socialmedia">Facebook</option>
         <option value="socialmedia">Instagram</option>
@@ -231,14 +233,15 @@
         <input type="radio" name="ask" value="yes"> Yes
         <input type="radio" name="ask" value="no"> No
     </label>
+</fieldset>
 </form>
 
 <form>
     <fieldset>
         <center>
-            <h2><img src="images/upload.png"> Upload Picture</h2>
-            <input type="file" name="userfile"> <br>
-            <input type="submit" value="Upload Picture">
+            <legend><img src="images/upload.png"> Upload Picture</legend>
+            <input type="file" name="userfile" required> <br>
+            <input type="submit" value="Upload Picture" required>
             <br>    
                    ~ With white or blue background <br>
                     ~ File size must be less than 1MB <br>
@@ -262,17 +265,16 @@
     </fieldset>
     <br>
     <fieldset>
-        <h4><img src="images/alert.png"> Important Notice:</h4>
+        <legend><img src="images/alert.png"> Important Notice:</legend>
         <p>Please ensure all information provided is accurate. Incomplete or false information may result in rejection of your application.</p>
     </fieldset>
     <br>
     <fieldset>
-    <input type="checkbox">
+    <input type="checkbox" required>
     I'm not a robot 
     <img src="images/recaptcha.jpg" width="50" height="50">
     </fieldset>
     <br>
-    c
-    <center><button type="submit" > <b>📄 Submit Registration </b></button></center>
+    <center><button type="submit"> <b>📄 Submit Registration </b></button></center>
 </body>
 </html>
